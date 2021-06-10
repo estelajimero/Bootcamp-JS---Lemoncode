@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de usuario</title>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <img id="avatar" alt="Avatar" class="avatar">
+        </div>
+        <div class="data">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" name="lastName">
+        </div>
+        <div class="interaction">
+            <button type="button"
+            onclick="console.log(document.getElementById('name').value)">
+                Update
+            </button>
+        </div>
+        <p class="avatar-text">*El avatar se ha sacado de la colección de
+            <a href="https://boringavatars.com"> Boring Avatars</a>.</p>
+    </div>
+    <script src="js/demo.js"></script>
+</body>
+</html>
