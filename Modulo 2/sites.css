@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: auto;
+    padding: 20px;
+}
+
+.column {
+    width: 50%;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    box-shadow: 0px 1px 0px 0px hsl(290, 1%, 91%);
+}
+
+.hotel-name {
+    text-transform: uppercase;
+    color: hsl(193, 92%, 21%);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.hotel-location {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.hotel-photo {
+    height: 200px;
+    width: 350px;
+}
+
+.stars {
+    margin-bottom: 10px;
+} 
+
+.stars span {
+    color: teal;
+    font-size: 20px;
+}
+
