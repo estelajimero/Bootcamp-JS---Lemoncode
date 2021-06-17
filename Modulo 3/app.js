@@ -37,7 +37,6 @@ switch(product.type) {
 
 // Avanzado: Calcular el total de IVA
 let precioIva = (product.price * 0.21) + product.price;
-console.log("El precio con IVA: " , precioIva);
 
 function getTotalVat(product) {
     return product.count > 0 ? precioIva : 0;
