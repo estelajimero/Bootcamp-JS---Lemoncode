@@ -35,26 +35,67 @@ switch(product.type) {
 //     console.log(`El IVA para este producto es ${otroIva}`);
 // }
 
+// Avanzado: Calcular el total de IVA
+let precioIva = (product.price * 0.21) + product.price;
+console.log("El precio con IVA: " , precioIva);
 
-// Extra 1: Calcular sueldo neto en nómina
+function getTotalVat(product) {
+    return product.count > 0 ? precioIva : 0;
+}
+
+let resultado = getTotalVat(product).toFixed(2);
+
+console.log(`El valor total de los productos es: ${resultado}€`);
+
+// Extra 1: Calcular sueldo neto anual y mensual en nómina
 const empleado = {
     bruto: 14500,
     hijos: 2,
     pagas: 14
 }
 
+let netoAnual = 0;
+let netoMensual = 0;
+
 if(empleado.bruto < 12000) {
-    if(empleado.hijos > 0) {
-        let netoAnual = empleado.bruto;
-        console.log(`El salario neto anual es ${netoAnual}`);
-    }
+    netoAnual = empleado.bruto;
+    netoMensual = (netoAnual / empleado.pagas).toFixed(2);
+    console.log(`El salario neto anual es ${netoAnual}`);
+    console.log(`El salario neto mensual es ${netoMensual}`);
 } else if (empleado.bruto < 24000) {
-    let 
+    if(empleado.hijos > 0) {
+        netoAnual = (empleado.bruto * 0.94).toFixed(2);
+        netoMensual = (netoAnual / empleado.pagas).toFixed(2);
+        console.log(`El salario neto anual para menos de 24K con hijos es ${netoAnual}`);
+        console.log(`El salario neto mensual para menos de 24K con hijos es ${netoMensual}`);
+    } else {
+        netoAnual = (empleado.bruto * 0.92).toFixed(2);
+        netoMensual = (netoAnual / empleado.pagas).toFixed(2);
+        console.log(`El salario neto anual para menos de 24K sin hijos es ${netoAnual}`);
+        console.log(`El salario neto mensual para menos de 24K sin hijos es ${netoMensual}`);
+    }
+} else if (empleado.bruto < 34000) {
+    if(empleado.hijos > 0) {
+        netoAnual = (empleado.bruto * 0.86).toFixed(2);
+        netoMensual = (netoAnual / empleado.pagas).toFixed(2);
+        console.log(`El salario neto anual para menos de 34K con hijos es ${netoAnual}`);
+        console.log(`El salario neto mensual para menos de 34K con hijos es  ${netoMensual}`);
+    } else {
+        netoAnual = (empleado.bruto * 0.84).toFixed(2);
+        netoMensual = (netoAnual / empleado.pagas).toFixed(2);
+        console.log(`El salario neto anual para menos de 34K sin hijos es ${netoAnual}`);
+        console.log(`El salario neto mensual para menos de 34K sin hijos es ${netoMensual}`);
+    }
+} else {
+    if(empleado.hijos > 0) {
+        netoAnual = (empleado.bruto * 0.72).toFixed(2);
+        netoMensual = (netoAnual / empleado.pagas).toFixed(2);
+        console.log(`El salario neto anual para más de 34K con hijos es ${netoAnual}`);
+        console.log(`El salario neto anual para más de 34K con hijos es ${netoAnual}`);
+    } else {
+        netoAnual = (empleado.bruto * 0.7).toFixed(2);
+        netoMensual = (netoAnual / empleado.pagas).toFixed(2);
+        console.log(`El salario neto anual para más de 34K sin hijos es ${netoAnual}`);
+        console.log(`El salario neto mensual para más de 34K sin hijos es ${netoMensual}`);
+    }
 }
-
-// < 12K -> 0%
-// < 24K -> 8%
-// < 34K -> 16%
-// > 34K -> 30%
-
-// con hijos -> -2 pt
