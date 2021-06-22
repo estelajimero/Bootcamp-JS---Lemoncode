@@ -9,7 +9,24 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <p class="title">Debe rellenar los campos con números y pulsar un botón para realizar la operación</p>
+
+    <div class="input-wrapper">
+        <input id="number-one" type="text">
+        <input id="number-two" type="text">
+    </div>
+
+    <div class="button-wrapper">
+        <button class="button" id="add">+</button>
+        <button class="button" id="subtract">-</button>
+        <button class="button" id="multiply">x</button>
+        <button class="button" id="divide">/</button>
+    </div>
+
+    <p class="result" id="result"></p>
+
+    <button class="reset" id="reset">Reiniciar</button>
+
     <script src="js/demo.js"></script>
 </body>
 </html>
