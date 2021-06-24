@@ -1,47 +1,48 @@
 // Refactorizado
-let numberOne = () => parseInt(document.getElementById("number-one").value);
-let numberTwo = () => parseInt(document.getElementById("number-two").value);
+function getInput(inputId) {
+    return parseInt(document.getElementById(inputId).value);
+}
 
 function setResult(result) {
     document.getElementById("result").innerHTML = result;
 }
 
 function add() {
-    if(isNaN(numberOne()) || isNaN(numberTwo())) {
+    if(isNaN(getInput("number-one")) || isNaN(getInput("number-two"))) {
         alert("Rellene ambos campos");
     } else {
-        setResult(numberOne() + numberTwo());
+        setResult(getInput("number-one") + getInput("number-two"));
     }
 }
 
 function subtract() {
-    if(isNaN(numberOne()) || isNaN(numberTwo())) {
+    if(isNaN(getInput("number-one")) || isNaN(getInput("number-two"))) {
         alert("Rellene ambos campos");
     } else {
-        setResult(numberOne() - numberTwo());
+        setResult(getInput("number-one") - getInput("number-two"));
     }
 }
 
 function multiply() {
-    if(isNaN(numberOne()) || isNaN(numberTwo())) {
+    if(isNaN(getInput("number-one")) || isNaN(getInput("number-two"))) {
         alert("Rellene ambos campos");
     } else {
-        setResult(numberOne() * numberTwo());
+        setResult(getInput("number-one") * getInput("number-two"));
     }
 }
 
 function divide() {
-    if(isNaN(numberOne()) || isNaN(numberTwo())) {
+    if(isNaN(getInput("number-one")) || isNaN(getInput("number-two"))) {
         alert("Rellene ambos campos");
     } else {
-        setResult(numberOne() / numberTwo());
+        setResult(getInput("number-one") / getInput("number-two"));
     }
 }
 
 function reset() {
     document.getElementById("number-one").value = "";
     document.getElementById("number-two").value = "";
-    document.getElementById("result").innerHTML = "";
+    setResult("");
 }
 
 document.getElementById("add").addEventListener("click", add);
