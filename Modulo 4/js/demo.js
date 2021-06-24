@@ -7,7 +7,7 @@ function setResult(result) {
 }
 
 function add() {
-    if(!numberOne() || !numberTwo()) {
+    if(isNaN(numberOne()) || isNaN(numberTwo())) {
         alert("Rellene ambos campos");
     } else {
         setResult(numberOne() + numberTwo());
@@ -15,7 +15,7 @@ function add() {
 }
 
 function subtract() {
-    if(!numberOne() || !numberTwo()) {
+    if(isNaN(numberOne()) || isNaN(numberTwo())) {
         alert("Rellene ambos campos");
     } else {
         setResult(numberOne() - numberTwo());
@@ -23,7 +23,7 @@ function subtract() {
 }
 
 function multiply() {
-    if(!numberOne() || !numberTwo()) {
+    if(isNaN(numberOne()) || isNaN(numberTwo())) {
         alert("Rellene ambos campos");
     } else {
         setResult(numberOne() * numberTwo());
@@ -31,7 +31,7 @@ function multiply() {
 }
 
 function divide() {
-    if(!numberOne() || !numberTwo()) {
+    if(isNaN(numberOne()) || isNaN(numberTwo())) {
         alert("Rellene ambos campos");
     } else {
         setResult(numberOne() / numberTwo());
@@ -49,6 +49,7 @@ document.getElementById("subtract").addEventListener("click", subtract);
 document.getElementById("multiply").addEventListener("click", multiply);
 document.getElementById("divide").addEventListener("click", divide);
 document.getElementById("reset").addEventListener("click", reset);
+
 
 // Sin refactorizar
 
