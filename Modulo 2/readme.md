@@ -1,0 +1,2 @@
+- Módulo 2: 
+Realizar una página simple que muestre una reseña de un hotel, recogiendo los datos que se le piden al usuario y mostrándolos en la ficha. No pueden usarse funciones, métodos ni controles de flujo.
