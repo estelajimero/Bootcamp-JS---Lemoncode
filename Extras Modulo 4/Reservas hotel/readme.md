@@ -23,3 +23,4 @@ Un ejemplo de estancia sería:
 OPCIONAL
 
     * Prescinde del botón calcular y muestra el resultado total a medida que el usuario va haciendo cambios en el formulario.
+
