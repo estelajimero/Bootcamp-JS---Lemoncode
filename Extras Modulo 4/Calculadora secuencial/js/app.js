@@ -10,8 +10,9 @@ function inputReset() {
     document.getElementById("number").value = "";
 }
 
-function updatePartialResult() {
-    switch (operator) {
+function updatePartialResult(operatorTemp) {
+    
+    switch (operatorTemp) {
         case "+":
             partialResult += operand;
             break;
@@ -35,7 +36,7 @@ function add() {
     } else {
         operand = getInput("number");
         
-        updatePartialResult();
+        updatePartialResult(operator);
         
         operator = "+";
 
@@ -49,7 +50,7 @@ function subtract() {
     } else {
         operand = getInput("number");
         
-        updatePartialResult();
+        updatePartialResult(operator);
         
         operator = "-";
 
@@ -63,7 +64,7 @@ function multiply() {
     } else {
         operand = getInput("number");
         
-        updatePartialResult();
+        updatePartialResult(operator);
         
         operator = "*";
 
@@ -77,7 +78,7 @@ function divide() {
     } else {
         operand = getInput("number");
         
-        updatePartialResult();
+        updatePartialResult(operator);
         
         operator = "/";
 
@@ -88,13 +89,14 @@ function divide() {
 function equal() {
     operand = getInput("number");
 
-    updatePartialResult();
+    updatePartialResult(operator);
 
     document.getElementById("result").innerHTML = partialResult;
 }
 
 function reset() {
     inputReset();
+
     document.getElementById("result").innerHTML = "";
 }
 
