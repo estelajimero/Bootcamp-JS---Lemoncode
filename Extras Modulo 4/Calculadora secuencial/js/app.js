@@ -7,7 +7,7 @@ function getInput(inputId) {
 }
 
 function inputReset() {
-    return document.getElementById("number").value = "";
+    document.getElementById("number").value = "";
 }
 
 function updatePartialResult() {
