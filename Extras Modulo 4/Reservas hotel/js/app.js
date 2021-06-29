@@ -1,4 +1,4 @@
-function finalPrice() {
+function getRoomRate() {
     let roomType = document.getElementById("room-type-input").value; 
     let roomPrice = 0;
     
@@ -16,12 +16,18 @@ function finalPrice() {
             break;
     }
 
-    let numberNights = parseInt(document.getElementById("nights-number").value);
-
     if(document.getElementById("spa-included").checked) {
         roomPrice += 20;
     }
-    
+
+    return roomPrice;
+}
+
+function getNights() {
+    return parseInt(document.getElementById("nights-number").value);
+}
+
+function getOccupancyRate() {
     let roomCapacity = document.getElementById("room-capacity").value;
     let capacityRatio = 0;
 
@@ -39,12 +45,20 @@ function finalPrice() {
             break;
     }
 
+    return capacityRatio;
+}
+
+function getParkingRate() {
     let parkingNights = parseInt(document.getElementById("parking-nights").value);
     let parkingPrice = 10 * parkingNights;
 
-    let total = "El precio total de la reserva es " + (((roomPrice * capacityRatio) * numberNights) + parkingPrice) + "€";
+    return parkingPrice;
+}
 
-    document.getElementById("final-price").innerText = total;
+function finalPrice() {
+    let total = (((getRoomRate() * getOccupancyRate()) * getNights()) + getParkingRate());
+
+    document.getElementById("final-price").innerText = "El precio total de la reserva es " + total + "€";
 }
 
 // document.getElementById("total").addEventListener("click", finalPrice);
