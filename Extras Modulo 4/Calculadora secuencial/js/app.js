@@ -11,7 +11,6 @@ function inputReset() {
 }
 
 function updatePartialResult(operatorTemp) {
-    
     switch (operatorTemp) {
         case "+":
             partialResult += operand;
