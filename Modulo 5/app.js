@@ -81,13 +81,25 @@ const cart = [
 
 // Opcional
 // Si todos los productos son prime mostrar un mensaje "Pedido sin gastos de envío", si no "Este pedido tiene gastos de envío"
-// for (product of cart) {
-//     if(product.premium == true) {
-//         console.log("Pedido sin gastos de envío");
-//     } else {
-//         console.log("Este pedido tiene gastos de envío");
-//     }
-// }
+function getShippingCosts(products) {
+    let premium = true;
+
+    for (product of products) {
+        if(product.premium === false) {
+            premium = false;
+
+            break;
+        }
+    }
+
+    if (premium) {
+        return "Pedido sin gastos de envío";
+    } else {
+        return "Este pedido tiene gastos de envío";
+    }
+}
+
+console.log(getShippingCosts(cart));
 
 // Mostrar el carrito en un listado de html básico
 // let ul = document.createElement('ul');
