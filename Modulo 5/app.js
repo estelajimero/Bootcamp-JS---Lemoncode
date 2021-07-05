@@ -43,11 +43,15 @@ function getProducts (product) {
 }
 
 // Eliminar el producto con id 54657 del carrito de la compra
+// let index;
+
 // for (let i = 0; i < cart.length; i++) {
 //     if (cart[i].id == 54657) {
-//         cart.splice(i, 1);
+//         index = i;
 //     }
 // }
+
+// cart.splice(index, 1);
 
 // console.log(cart);
 
