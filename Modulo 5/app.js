@@ -30,39 +30,47 @@ const cart = [
 ];
 
 // Listar todos los productos de la compra
-for (product of cart) {
-    getProducts(product);
-}
+// for (product of cart) {
+//     getProducts(product);
+// }
 
-function getProducts (product) {
-    console.log("---------");
+// function getProducts (product) {
+//     console.log("---------");
 
-    for(attr in product) {
-        console.log(attr.toUpperCase() + ": " + product[attr]);
-    }
-}
-
-// Eliminar el producto con id 54657 del carrito de la compra
-// let index;
-
-// for (let i = 0; i < cart.length; i++) {
-//     if (cart[i].id == 54657) {
-//         index = i;
+//     for(attr in product) {
+//         console.log(attr.toUpperCase() + ": " + product[attr]);
 //     }
 // }
 
-// cart.splice(index, 1);
+// Eliminar el producto con id 54657 del carrito de la compra
+// function deleteItemById(id) {
+//     let index;
 
-// console.log(cart);
+//     for (let i = 0; i < cart.length; i++) {
+//         if (cart[i].id == id) {
+//             index = i;
 
-// Calcular el total del carrito de la compra (el coste de una línea es precio * cantidad)
-// let total = 0;
+//             break;
+//         }
+//     }
 
-// for (product of cart) {
-//     total += product.price * product.count;
+//     cart.splice(index, 1);
 // }
 
-// console.log(total);
+// deleteItemById(54657);
+
+// Calcular el total del carrito de la compra (el coste de una línea es precio * cantidad)
+// function totalCalculate () {
+//     let total = 0;
+
+//     for (product of cart) {
+//         total += product.price * product.count;
+//     }
+
+//     return total;
+// }
+
+// console.log(totalCalculate());
 
 // Filtrar por los productos que sean prime
 // for (product of cart) {
@@ -116,14 +124,18 @@ function getProducts (product) {
 // }
 
 // Aplicar un descuento del 5% si la compra es mayor de 100€
-// let total = 0;
+// function getTotalWithDiscount() {
+//     let total = 0;
 
-// for (product of cart) {
-//     total += product.price * product.count;
-
-//     if(total > 100) {
-//         total = total * 0.95;
+//     for (product of cart) {
+//         total += product.price * product.count;
+    
+//         if(total > 100) {
+//             total = total * 0.95;
+//         }
 //     }
+
+//     return total
 // }
 
-// console.log(total);
+// console.log(getTotalWithDiscount());
