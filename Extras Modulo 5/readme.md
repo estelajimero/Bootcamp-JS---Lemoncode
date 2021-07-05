@@ -53,3 +53,113 @@ js
 
 8º Dado un array de hoteles, incrementa en 10 euros su precio aquellos que tengan menos de 10 habitaciones
 disponibles. Muestra tanto aquellos que cumplan dicha condición como los que no.
+Pista: Usa funciones cuando sea necesario.
+
+    [
+        {
+            hoteId: 1,
+            hotelName: "Jhon",
+            availableRooms: 25,
+            price: 10.20,
+        },
+        {
+            hoteId: 2,
+            hotelName: "Doe",
+            availableRooms: 8,
+            price: 4.25,
+        },
+        {
+            hoteId: 3,
+            hotelName: "Clara",
+            availableRooms: 15,
+            price: 14.30,
+        },
+        {
+            hoteId: 4,
+            hotelName: "Elisa",
+            availableRooms: 30,
+            price: 10,
+        },
+        {
+            hoteId: 4,
+            hotelName: "Pedro",
+            availableRooms: 10,
+            price: 8.10,
+        },
+    ]
+
+9º Dado un array de hoteles, incrementa en 10 euros su precio aquellos que tengan menos de 10 habitaciones
+disponibles. Muestra solo aquellos que cumplan la condición en un array nuevo.
+
+    [
+        {
+            hoteId: 1,
+            hotelName: "Hotel 1",
+            availableRooms: 25,
+            price: 10.20,
+        },
+        {
+            hoteId: 2,
+            hotelName: "Hotel 2",
+            availableRooms: 8,
+            price: 4.25,
+        },
+        {
+            hoteId: 3,
+            hotelName: "Hotel 3",
+            availableRooms: 15,
+            price: 14.30,
+        },
+        {
+            hoteId: 4,
+            hotelName: "Hotel 4",
+            availableRooms: 30,
+            price: 10,
+        },
+        {
+            hoteId: 5,
+            hotelName: "Hotel 5",
+            availableRooms: 10,
+            price: 8.10,
+        },
+    ]
+
+10º Dado el siguiente array de hotels y el html con un input de texto y un botón. Que muestre el siguiente
+mensaje si existe el hotel: El hotel Hotel 1 existe. Y mostrar el mensaje: El hotel Hotel 1 no existe en caso
+contrario. Pista: Usa un evento de javascript de los visto por ahora en el curso.
+
+[ 
+    { 
+        hoteId: 1, 
+        hotelName: "Hotel 1", 
+        availableRooms: 25, 
+        price: 10.20, 
+    }, 
+    { 
+        hoteId: 2, 
+        hotelName: "Hotel 2", 
+        availableRooms: 8, 
+        price: 4.25, 
+    }, 
+    { 
+        hoteId: 3, 
+        hotelName: "Hotel 3", 
+        availableRooms: 15, 
+        price: 14.30, 
+    }, 
+    { 
+        hoteId: 4, 
+        hotelName: "Hotel 4",
+        availableRooms: 30, 
+        price: 10, 
+    }, 
+    { 
+        hoteId: 5, 
+        hotelName: "Hotel 5",
+        availableRooms: 10,
+        price: 8.10, 
+    }, 
+]
+
+<input type="text" id="textBox">
+<input type="button" id="myButton" value="click me">
