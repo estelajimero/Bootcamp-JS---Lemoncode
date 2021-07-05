@@ -1,0 +1,17 @@
+.list-item {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    font-weight: bold;
+    color: darkmagenta;
+}
+
+.list-content {
+    list-style-type: none;
+    font-size: .8em;
+    font-weight: 100;
+    color: black;
+    border: 1px solid lightgrey;
+    padding: .5em;
+    width: 30%;
+}
