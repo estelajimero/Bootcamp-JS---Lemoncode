@@ -1,22 +1,24 @@
-Carrito de la Compra
-
-Introducción
+### Carrito de la Compra
+### Introducción
+<br>
 Vamos a implementar un carrito de la compra donde el usuario pueda elegir las unidades que desea de cada producto, a
 partir de una lista de productos dada.
 
 Tendremos por tanto, una sección describiendo la lista de productos y selectores para elegir las unidades deseadas, un
 botón para calcular la factura, y una zona con la factura desglosada mostrando el subtotal, impuestos y el importe total.
 
-Datos de entrada
+### Datos de entrada
 
 Vamos a proporcionarte un ejemplo de lista de productos. Utilízala en tu ejercicio como punto de partida:
 
-// Constantes.
+// Constantes
+
     const REGULAR_TYPE = 21;
     const LOWER_TYPE = 4;
     const EXEMPT_TYPE = 0;
 
-// Entrada.
+// Entrada
+
     const products = [
         {
             description: "Goma de borrar",
@@ -83,7 +85,7 @@ Fíjate que cada producto consta de:
 * Stock disponible.
 * Unidades. Inicialmente 0 para todos los productos.
 
-HTML Dinámico
+### HTML Dinámico
 
 Hasta ahora, hemos hecho los ejercicios anteriores con HTML estático. Es decir, dada la lista anterior habríais creado
 elementos html en vuestro fichero index.html para todos esos productos. Pero esto es algo poco flexible...
@@ -99,11 +101,17 @@ ejercicio.
 Para generar HTML de forma dinámica te explicamos a continuación unas nociones a través del siguiente ejemplo:
 
 var input = document.createElement("input");
+
 input.setAttribute("class", "product-unit");
+
 input.setAttribute("type", "number");
+
 input.setAttribute("value", 5);
+
 input.addEventListener("change", event => console.log(event.target.value));
+
 var main = document.getElementById("main");
+
 main.appendChild(input);
 
 En dicho código hemos creado un elemento <input> , hemos modificado ciertas propiedades, registrado un eventListener
@@ -118,7 +126,7 @@ de añadirlo como hijo de algún otro elemento que ya exista en nuestro HTML pre
 - addEventListener para registrar event listeners ante cualquier evento que se produzca en el elemento HTML en
 cuestión.
 
-Cálculo de factura
+### Cálculo de factura
 
 Al pulsar el botón de calcular, el usuario deberá recibir el desglose de la factura a través de 3 campos: subtotal , impuestos
 y total .
@@ -138,7 +146,8 @@ productos con su descripción, precio unitario y un input de unidades para cada 
 3. Prepara un algoritmo que calcule la factura cuando pulsemos el botón calcular y muestre el resultado en los campos
 subtotal, impuestos y total.
 
-Extra
+### Extra
+<br>
 Intenta hacer que el botón Calcular se habilite o deshabilite en función de si el usuario ha elegido al menos 1 unidad de
 algún producto o no. Es decir:
 
@@ -148,4 +157,5 @@ algún producto o no. Es decir:
 Para habilitar o deshabilitar un elemento HTML puedes hacer lo siguiente:
 
 document.getElementById("button-calculate").disabled = true; // Disabled
+
 document.getElementById("button-calculate").disabled = false; // Enabled
