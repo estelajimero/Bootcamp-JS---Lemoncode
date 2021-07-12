@@ -64,17 +64,17 @@ let products = [
 let form = document.getElementById("shopping-list");
 let button = document.getElementById("calculate");
 
-var isValidUnit = () => {
-    var isValid = true;
-    for(item of products){
-        if(item.units > 0){
+let isValidInput = () => {
+    let isValid = true;
+    for(product of products){
+        if(product.units > 0){
             isValid = false;
         }
     }
     document.getElementById("calculate").disabled = isValid;
 }
 
-isValidUnit();
+isValidInput();
 
 function showArrayElements() {
     for(let i = 0; i < products.length; i++) {
@@ -96,7 +96,7 @@ function showArrayElements() {
         inputUnit.setAttribute("max", products[i].stock);
         inputUnit.addEventListener("change", event => {
             products[i].units = (event.target.valueAsNumber);
-            isValidUnit();
+            isValidInput();
         });
 
         form.appendChild(productDiv);
