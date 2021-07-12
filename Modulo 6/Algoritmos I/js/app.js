@@ -1,7 +1,3 @@
-// Redondear cantidades
-// Extra
-// Refactorizar
-
 const REGULAR_TYPE = 21;
 const LOWER_TYPE = 4;
 const EXEMPT_TYPE = 0;
@@ -66,6 +62,19 @@ let products = [
 ];
 
 let form = document.getElementById("shopping-list");
+let button = document.getElementById("calculate");
+
+var isValidUnit = () => {
+    var isValid = true;
+    for(item of products){
+        if(item.units > 0){
+            isValid = false;
+        }
+    }
+    document.getElementById("calculate").disabled = isValid;
+}
+
+isValidUnit();
 
 function showArrayElements() {
     for(let i = 0; i < products.length; i++) {
@@ -81,7 +90,14 @@ function showArrayElements() {
         let inputUnit = document.createElement("input");
         inputUnit.setAttribute("class", "input-unit");
         inputUnit.setAttribute("id", "input-unit-" + i);
-        inputUnit.setAttribute("type", "text");
+        inputUnit.setAttribute("type", "number");
+        inputUnit.setAttribute("required", "required");
+        inputUnit.setAttribute("min", 0);
+        inputUnit.setAttribute("max", products[i].stock);
+        inputUnit.addEventListener("change", event => {
+            products[i].units = (event.target.valueAsNumber);
+            isValidUnit();
+        });
 
         form.appendChild(productDiv);
         productDiv.appendChild(productItem);
@@ -106,7 +122,6 @@ function getProductSubtotal () {
 
     return subtotal;
 }
-
 
 function getIVA () {
     let totalTaxes = 0;
@@ -148,4 +163,4 @@ function getValues() {
     totalValue.innerHTML = total.toFixed(2);
 }
 
-document.getElementById("calculate").addEventListener("click", getValues);
+button.addEventListener("click", getValues);
