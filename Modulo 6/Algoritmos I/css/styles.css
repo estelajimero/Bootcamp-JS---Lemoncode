@@ -40,6 +40,11 @@ body {
     background-color: hsl(183, 85%, 15%);
 }
 
+.calculate:disabled {
+    background-color: gray;
+    cursor: auto;
+}
+
 .check-container {
     width: 40%;
     margin: auto;
@@ -56,7 +61,7 @@ body {
     margin-bottom: 3em;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
 }
 
 .subtotal-container p {
@@ -82,13 +87,9 @@ body {
 /**** HTML ELEMENTS WITH JS ****/
 .product-div {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 1.5em;
-}
-
-.product-item {
-    margin-right: 2em;
 }
 
 .input-unit {
