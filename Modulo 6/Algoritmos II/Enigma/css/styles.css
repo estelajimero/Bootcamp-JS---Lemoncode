@@ -1,0 +1,58 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.description-text {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+
+.textarea-wrapper {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-wrapper {
+    margin: 2em;
+}
+
+button {
+    padding: .9em;
+    margin: .5em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 0px rgba(213,209,209,0.75);
+    font-weight: bold;
+}
+
+.encrypted {
+    color: white;
+    background-color: hsl(267, 97%, 31%);
+}
+
+.encrypted:hover,
+.encrypted:focus {
+    background-color: hsl(267, 83%, 63%);
+    transition: .2s ease-in;
+}
+
+.decrypted {
+    color: white;
+    background-color: hsl(177, 90%, 30%);
+}
+
+.decrypted:hover,
+.decrypted:focus {
+    background-color: hsl(177, 90%, 41%);
+    transition: .2s ease-in;
+}
