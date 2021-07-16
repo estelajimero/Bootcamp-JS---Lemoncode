@@ -11,12 +11,12 @@
     <h1>Enigma</h1>
     <p class="description-text">Introduce tu texto a encriptar o desencriptar y haz clic en los botones 🕵🏼‍♀️</h3>
     <div class="textarea-wrapper">
-        <textarea name="new-text" id="new-text" cols="40" rows="20" class="new-text">Escribe aquí tu texto...</textarea>
+        <textarea name="plain-text" id="encrypt-text" cols="40" rows="20" class="new-text">Escribe aquí tu texto</textarea>
         <div class="button-wrapper">
-            <button class="encrypted" type="button">Encrypt</button>
-            <button class="decrypted" type="button">Decrypt</button>
+            <button class="encrypted" id="encrypt" type="button">Encrypt</button>
+            <button class="decrypted" id="decrypt" type="button">Decrypt</button>
         </div>
-        <textarea name="new-text" id="new-text" cols="40" rows="20" class="new-text"></textarea>
+        <textarea name="decrypt-text" id="decrypt-text" cols="40" rows="20" class="new-text"></textarea>
     </div>
     <script src="js/app.js"></script>
 </body>
