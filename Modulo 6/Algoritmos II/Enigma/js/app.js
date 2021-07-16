@@ -1,11 +1,12 @@
-let plainAlphabet = "abcdefghijklmnopqrstuvwxyz:()!¡,' ";  
-let encryptedAlphabet = "qw,ert(yuio'pa:sdfg!hjklz¡xcv)bnm ";
+let plainAlphabet = "abcdefghijklmnopqrstuvwxyz:()!¡,'  ñ";  
+let encryptedAlphabet = "qw,ert(yuio'pa:sdfg!hjklz¡xcv)bnm  ñ";
 
 let encryptButton = document.getElementById("encrypt");
 let decryptButton = document.getElementById("decrypt");
 
 function encrypt (text) {
     let encryptedResult = "";
+    text = text.toLowerCase();
 
     for (let i = 0; i < text.length; i++) {
         for (let j = 0; j < plainAlphabet.length; j++) {
@@ -22,6 +23,7 @@ function encrypt (text) {
 
 function decrypt (text) {
     let decryptedResult = "";
+    text = text.toLowerCase();
 
     for (let i = 0; i < text.length; i++) {
         for (let j = 0; j < encryptedAlphabet.length; j++) {
