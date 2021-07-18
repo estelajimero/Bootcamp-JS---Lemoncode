@@ -38,35 +38,66 @@ let decryptButton = document.getElementById("decrypt");
 //     return decryptedResult;
 // }
 
+// Refactorizado
+// function transformText (text, plainAlphabet, encryptedAlphabet) {
+//     let result = "";
+//     text = text.toLowerCase();
+
+//     for (let i = 0; i < text.length; i++) {
+//         for (let j = 0; j < plainAlphabet.length; j++) {
+//             if (text[i] === plainAlphabet[j]) {
+//                 result += encryptedAlphabet[j];
+
+//                 break;
+//             }
+//         }
+//     }
+
+//     return result;
+// }
+
 // Con indexOf
-function encrypt (text) {
-    let encryptedResult = "";
+// function encrypt (text) {
+//     let encryptedResult = "";
+//     text = text.toLowerCase();
+
+//     for (let i = 0; i < text.length; i++) {
+//         let index = plainAlphabet.indexOf(text[i]);
+//         encryptedResult += encryptedAlphabet[index];
+//     }
+
+//     return encryptedResult;
+// }
+
+// function decrypt (text) {
+//     let decryptedResult = "";
+//     text = text.toLowerCase();
+
+//     for (let i = 0; i < text.length; i++) {
+//         let index = encryptedAlphabet.indexOf(text[i]);
+//         decryptedResult += plainAlphabet[index];
+//     }
+
+//     return decryptedResult;
+// }   
+
+// Refactorizado
+function transformText (text, plainAlphabet, encryptedAlphabet) {
+    let result = "";
     text = text.toLowerCase();
 
     for (let i = 0; i < text.length; i++) {
         let index = plainAlphabet.indexOf(text[i]);
-        encryptedResult += encryptedAlphabet[index];
+        result += encryptedAlphabet[index];
     }
 
-    return encryptedResult;
+    return result;
 }
-
-function decrypt (text) {
-    let decryptedResult = "";
-    text = text.toLowerCase();
-
-    for (let i = 0; i < text.length; i++) {
-        let index = encryptedAlphabet.indexOf(text[i]);
-        decryptedResult += plainAlphabet[index];
-    }
-
-    return decryptedResult;
-}   
 
 let getEncryptedText = () => {
     let encryptedText = document.getElementById("encrypt-text").value;
 
-    let textResult = encrypt(encryptedText);
+    let textResult = transformText(encryptedText, plainAlphabet, encryptedAlphabet);
 
     document.getElementById("decrypt-text").value = textResult;
 }
@@ -74,7 +105,7 @@ let getEncryptedText = () => {
 let getDecryptedText = () => {
     let decryptedText = document.getElementById("encrypt-text").value;
 
-    let textResult = decrypt(decryptedText);
+    let textResult = transformText(decryptedText, encryptedAlphabet, plainAlphabet);
 
     document.getElementById("decrypt-text").value = textResult;
 }
