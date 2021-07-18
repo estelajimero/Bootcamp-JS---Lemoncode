@@ -49,15 +49,15 @@ Te proponemos que partas de las siguientes estructuras de datos:
 WORK_HOURS
 
 Como ves, WORK_HOURS es un array que representa las posibles franjas horarias de cada miembro del equipo. En total son 8
-(8 horas laborables) y si te fijas se ha excluido la franja de 14h a 15h ya que se reserva para el almuerzo. Este array de horas laborables podría servirte para mostrar por consola cada una de las franjas de cada miembro del equipo y si está libre o no.
+(8 horas laborables) y si te fijas se ha excluído la franja de 14h a 15h ya que se reserva para el almuerzo. Este array de horas laborables podría servirte para mostrar por consola cada una de las franjas de cada miembro del equipo y si está libre o no.
 
     myTeam
 
-El equipo lo vamos a representar con un array de miembros llamado myTeam . Dicho array contiene objetos que representan
+El equipo lo vamos a representar con un array de miembros llamado myTeam. Dicho array contiene objetos que representan
 a cada miembro, y que tienen 2 propiedades:
 
-* El nombre del miembro (propiedad name ).
-* La disponibilidad de esa persona (propiedad availability ).
+* El nombre del miembro (propiedad name).
+* La disponibilidad de esa persona (propiedad availability).
 * La disponibilidad de cada miembro ( availability ) se ha modelado como un array de 8 posiciones (8 franjas horarias en
 total) que por defecto se ha inicializado a true para todas las franjas horarias. Es decir, inicialmente, todos los miembros
 están disponibles todas las horas.
