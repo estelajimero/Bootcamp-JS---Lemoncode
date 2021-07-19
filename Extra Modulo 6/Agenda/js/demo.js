@@ -33,6 +33,7 @@ let getRandom = () =>  Math.random() < 0.5;
 
 for (member of myTeam) {
     console.log("---- Disponibilidad de ", member.name, " ----");
+    
     for (let i = 0; i < member.availability.length; i ++) {
         member.availability[i] = getRandom();
 
@@ -44,11 +45,41 @@ for (member of myTeam) {
     }
 }
 
+// Buscar hueco libre
+let searchFreeSpot = () => {
+    let freeHours = [];
 
-// console.log("Hueco encontrado en el horario ", WORK_HOURS[i]);
-// console.log("Lo siento. No hay hueco disponible en el equipo.");
+    for (let i = 0; i < myTeam.length; i++) {
+        for (let j = 0; j < myTeam[i].availability.length; j++) {
+            if (i === 0 && myTeam[i].availability[j] === true) {
+                freeHours.push(j);
+            } else if (i !== 0) {
+                let elementsToRemove = [];
 
+                for (z = 0; z < freeHours.length; z++) {
+                    if (!myTeam[i].availability[freeHours[z]]) {
+                        elementsToRemove.push(freeHours[z]);
+                    }
+                }
 
+                for (z = 0; z < elementsToRemove.length; z++) {
+                    let index = freeHours.indexOf(elementsToRemove[z]);
 
+                    if (index !== -1) {
+                        freeHours.splice(index, 1);
+                    }
+                }
+            }
+        }
+    }
 
-    
+    return freeHours;
+}
+
+let result = searchFreeSpot();
+
+if (result.length > 0) {
+    console.log("Hueco encontrado en el horario ", WORK_HOURS[result[0]]);
+} else {
+    console.log("Lo siento. No hay hueco disponible en el equipo.");
+}
