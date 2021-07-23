@@ -54,19 +54,9 @@ let searchFreeSpot = () => {
             if (i === 0 && myTeam[i].availability[j] === true) {
                 freeHours.push(j);
             } else if (i !== 0) {
-                let elementsToRemove = [];
-
-                for (z = 0; z < freeHours.length; z++) {
+                for (let z = freeHours.length - 1; z >= 0; z--) {
                     if (!myTeam[i].availability[freeHours[z]]) {
-                        elementsToRemove.push(freeHours[z]);
-                    }
-                }
-
-                for (z = 0; z < elementsToRemove.length; z++) {
-                    let index = freeHours.indexOf(elementsToRemove[z]);
-
-                    if (index !== -1) {
-                        freeHours.splice(index, 1);
+                        freeHours.splice(z, 1);
                     }
                 }
             }
