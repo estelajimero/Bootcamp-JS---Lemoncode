@@ -51,7 +51,7 @@ let searchFreeSpot = () => {
 
     for (let i = 0; i < myTeam.length; i++) {
         for (let j = 0; j < myTeam[i].availability.length; j++) {
-            if (i === 0 && myTeam[i].availability[j] === true) {
+            if (i === 0 && myTeam[i].availability[j]) {
                 freeHours.push(j);
             } else if (i !== 0) {
                 for (let z = freeHours.length - 1; z >= 0; z--) {
