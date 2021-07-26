@@ -570,65 +570,65 @@ console.log(upperLowCase("este es mi texto"));
 
 
 // 18.
-// let getAllArr = (arr) => {
-//     let newArr = [];
+let getAllArr = (arr) => {
+    let newArr = [];
 
-//     for (let i = 0; i < arr.length; i++) {
-//         for (let j = 0; j < arr[i].length; j++) {
-//             newArr.push(arr[i][j]);
-//         }
-//     }
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            newArr.push(arr[i][j]);
+        }
+    }
 
-//     return newArr;
-// }
+    return newArr;
+}
 
-// let arrTest = [ ["Hola", "Adiós"], ["Samuel", "Margarita"], [19, 28] ];
+let arrTest = [ ["Hola", "Adiós"], ["Samuel", "Margarita"], [19, 28] ];
 
-// console.log(getAllArr(arrTest));
+console.log(getAllArr(arrTest));
 
 // Otra forma
-// let getSubarrOfArr = (arr) => {
-//     let arrResult = [];
+let getSubarrOfArr = (arr) => {
+    let arrResult = [];
 
-//     for (element of arr) {
-//         for (let i = 0; i < element.length; i++) {
-//             arrResult.push(element[i])
-//         }
-//     }
+    for (element of arr) {
+        for (let i = 0; i < element.length; i++) {
+            arrResult.push(element[i])
+        }
+    }
 
-//     return arrResult;
-// }
+    return arrResult;
+}
 
-// console.log(getSubarrOfArr(arrTest));
+console.log(getSubarrOfArr(arrTest));
 
 // Array de elementos complejos
-// let getComplexArr = (arr) => {
-//     let result = [];
+let getComplexArr = (arr) => {
+    let result = [];
 
-//     for (element of arr) {
-//         for (prop in element) {
-//             for (value of element[prop]) {
-//                 result.push(value);
-//             }
-//         }
-//     }
+    for (element of arr) {
+        for (prop in element) {
+            for (value of element[prop]) {
+                result.push(value);
+            }
+        }
+    }
 
-//     return result;
-// }
+    return result;
+}
 
-// let myTeam = [
-//     {
-//         availability: new Array(8).fill(true)
-//     },
-//     {
-//         availability: new Array(8).fill(false)
-//     },
-//     {
-//         availability: new Array(8).fill(true)
-//     },
-//     {
-//         availability: new Array(8).fill(false)
-//     },
-// ];
+let myTeam = [
+    {
+        availability: new Array(8).fill(true)
+    },
+    {
+        availability: new Array(8).fill(false)
+    },
+    {
+        availability: new Array(8).fill(true)
+    },
+    {
+        availability: new Array(8).fill(false)
+    },
+];
 
-// console.log(getComplexArr(myTeam));
+console.log(getComplexArr(myTeam));
