@@ -35,7 +35,6 @@ let getChange = (obj, paid, total) => {
 let createPar = (change) => {
     let divContainer = document.getElementById("result-wrapper");
 
-    // Refactorizar bucles en uno
     for (type in change) {
         if (type !== "difference") {
             for (amount of [...new Set(change[type])]) {
@@ -62,72 +61,6 @@ let createPar = (change) => {
             }
         }
     }
-
-    // Tres bucles según propiedades del objeto
-    // for (bill of [...new Set(change.billChange)]) {
-    //     let bills = change.billChange.filter(a => a === bill).length;
-
-    //     let parBillHtml = document.createElement('p');
-    //     parBillHtml.className = "p";
-
-    //     parBillHtml.innerHTML = bills + " billetes de " + bill + "€.";
-
-    //     divContainer.appendChild(parBillHtml);
-    // }
-
-    // for (coin of [...new Set(change.euroChange)]) {
-    //     let coins = change.euroChange.filter(a => a === coin).length;
-
-    //     let parCoinHtml = document.createElement('p');
-    //     parCoinHtml.className = "p";
-
-    //     parCoinHtml.innerHTML = coins + " monedas de " + coin + "€.";
-
-    //     divContainer.appendChild(parCoinHtml);
-    // }
-
-    // for (cent of [...new Set(change.centChange)]) {
-    //     let cents = change.centChange.filter(a => a === cent).length;
-
-    //     let parCentHtml = document.createElement('p');
-    //     parCentHtml.className = "p";
-
-    //     parCentHtml.innerHTML = cents + " monedas de " + cent + " céntimos.";
-
-    //     divContainer.appendChild(parCentHtml);
-    // }
-
-    // El monstruo de bucles y condicionales :(
-    // for (let i = 0; i < change.billChange.length; i++) {
-    //     if (change.billChange[i] !== valueBill) {
-    //         if (valueBill !== 0 || i === change.billChange.length - 1) {
-    //             let parBillHtml = document.createElement('p');
-    //             parBillHtml.className = "p";
-
-    //             if (i === change.billChange.length - 1 && bills === 0) {
-    //                 parBillHtml.innerHTML = "1 billete de " + change.billChange[i] + "€.";
-    //             } else {
-    //                 parBillHtml.innerHTML = bills + " billetes de " + valueBill + "€.";
-    //             }
-
-    //             divContainer.appendChild(parBillHtml);
-    //         }
-
-    //         valueBill = change.billChange[i];
-    //         bills = 1;
-    //     } else {
-    //         bills++;
-
-    //         if (i === change.billChange.length -1 ) {
-    //             let parBillHtml = document.createElement('p');
-    //             parBillHtml.className = "p";
-
-    //             parBillHtml.innerHTML = bills + " billetes de " + valueBill + "€.";
-
-    //             divContainer.appendChild(parBillHtml);
-    //         }
-    //     }
-    // }
 }
 
 let eraseValues = () => {
