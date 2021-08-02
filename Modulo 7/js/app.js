@@ -44,19 +44,19 @@ let patternUrl = /src=["|'](.*?)["|']/;
 console.log(patternUrl.exec(imgUrl));
 
 /** Caso 2 */
-let htmlLayout = 
-    '<html>' +
-        '<body>' +
-            '<img src="https://image.freepik.com/iconos-gratis/github-circular_318-10610.jpg"/>' +
-            '<h1>ejemplo</h1>' +
-            '<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"/>' +
-        '</body>' +
-    '</html>';
+// let htmlLayout = 
+//     '<html>' +
+//         '<body>' +
+//             '<img src="https://image.freepik.com/iconos-gratis/github-circular_318-10610.jpg"/>' +
+//             '<h1>ejemplo</h1>' +
+//             '<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"/>' +
+//         '</body>' +
+//     '</html>';
 
-let patternHTML = /<img.*?src=["|'](.*?)["|']/;
+// let patternHTML = /<img.*?src=["|'](.*?)["|']/;
 
-console.log(patternHTML.test(htmlLayout));
-console.log(patternHTML.exec(htmlLayout));
+// console.log(patternHTML.test(htmlLayout));
+// console.log(patternHTML.exec(htmlLayout));
 
 // Validar sintaxis tarjeta de crédito
 /** Caso 1 y 2 */
