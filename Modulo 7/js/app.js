@@ -57,8 +57,8 @@ let patternHTML = /<img.*?src=["|'](.*?)["|']/gim;
 // let patternHTML2 = /(https?.{1,}\..[a-z]{1,4})/gim;
 
 console.log(patternHTML.test(htmlLayout));
-console.log(patternHTML.exec(htmlLayout));
-// console.log(patternHTML2.exec(htmlLayout));
+console.log(htmlLayout.match(patternHTML));
+// console.log(htmlLayout.exec(patternHTML2));
 
 // Validar sintaxis tarjeta de crédito
 /** Caso 1 y 2 */
