@@ -15,15 +15,15 @@ ibanValues.forEach(value => {
     console.log(patternIbanValues.test(value));
 })
 
-/** Caso 3 **/
+// /** Caso 3 **/
 let iban1 = "ES6600190020961234567890";
 
 let patternIban1 = /^([A-Z]{2})(\d{2})\d{20}$/;
 
 console.log(patternIban1.exec(iban1));
 
-// Validar matrículas de coche
-/** Caso 1 y 2 **/
+// // Validar matrículas de coche
+// /** Caso 1 y 2 **/
 let carValues = ["2021 GMD", "2345-GMD", "4532BDB", "0320-AAA"];
 
 let patternCar = /^(\d{4})(\s|-?)([A-Z]{3})$/;
@@ -44,21 +44,21 @@ let patternUrl = /src=["|'](.*?)["|']/;
 console.log(patternUrl.exec(imgUrl));
 
 /** Caso 2 */
-// let htmlLayout = 
-//     '<html>' +
-//         '<body>' +
-//             '<img src="https://image.freepik.com/iconos-gratis/github-circular_318-10610.jpg"/>' +
-//             '<h1>ejemplo</h1>' +
-//             '<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"/>' +
-//         '</body>' +
-//     '</html>';
+let htmlLayout = 
+    `<html>
+        <body>
+            <img src="https://image.freepik.com/iconos-gratis/github-circular_318-10610.jpg"/>
+            <h1>ejemplo</h1>
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"/>
+        </body>
+    </html>`;
 
-// let patternHTML = /<img.*?src=["|'](.*?)["|']/;
+let patternHTML = /<img.*?src=["|'](.*?)["|']/gim;
+// let patternHTML2 = /(https?.{1,}\..[a-z]{1,4})/gim;
 
-// console.log(patternHTML.test(htmlLayout));
-// console.log(patternHTML.exec(htmlLayout));
-
-// Me coge la primera referencia de img, pero no la segunda :(
+console.log(patternHTML.test(htmlLayout));
+console.log(patternHTML.exec(htmlLayout));
+// console.log(patternHTML2.exec(htmlLayout));
 
 // Validar sintaxis tarjeta de crédito
 /** Caso 1 y 2 */
@@ -72,9 +72,9 @@ mastercardValues.forEach(value => {
 })
 
 
-// Buscar Expresiones regulares
+// // Buscar Expresiones regulares
 
-/** 1 y 2 */
+// /** 1 y 2 */
 let password = ["La;:%Y4MpxGW", "A7FqmYpQemXR"];
 
 let complexPassPattern = /^.*(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/;
@@ -85,7 +85,7 @@ password.forEach(value => {
     console.log(`Regex match with ${value}? ->`, mediumPassPattern.test(value))
 })
 
-/** 3 */
+// /** 3 */
 let urls = ["https://www.lemoncode.net", "www.lemoncode.net", "lemoncode.net", "www.lemoncode"];
 
 let urlsPattern = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
@@ -94,7 +94,7 @@ urls.forEach(value => {
     console.log(`Regex match with ${value}? ->`, urlsPattern.test(value));
 })
 
-/** 4 */
+// /** 4 */
 let hexColors = ["#C7FFE0", "#fff66c", "#CBA9E55"];
 
 let hexPattern = /^#([0-9A-Fa-f]{3}){1,2}$/;
