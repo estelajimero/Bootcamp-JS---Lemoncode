@@ -58,6 +58,8 @@ console.log(patternUrl.exec(imgUrl));
 // console.log(patternHTML.test(htmlLayout));
 // console.log(patternHTML.exec(htmlLayout));
 
+// Me coge la primera referencia de img, pero no la segunda :(
+
 // Validar sintaxis tarjeta de crédito
 /** Caso 1 y 2 */
 let mastercardValues = ["5299 64000 000 000", "5299-64000-000-000", "529964000000000"];
