@@ -1,4 +1,4 @@
-const AccountBusiness = require("./account-business");
+import * as AccountBusiness from "./account-business";
 import * as DataBusiness from "./data-business";
 
 function getClientElement(client) {
@@ -30,4 +30,4 @@ function getFullName(client) {
     return client.first_name + " " + client.last_name;
 }
 
-module.exports = { getClientElement, getClientNode, getFullName };
+export { getClientElement, getClientNode, getFullName };

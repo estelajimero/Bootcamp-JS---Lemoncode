@@ -1,4 +1,4 @@
-const StyleBusiness = require("./style-business");
+import * as StyleBusiness from "./style-business";
 
 function getClientAccountsElement(accounts) {
     const ul = document.createElement("ul");
@@ -20,4 +20,4 @@ function getAccountElement(account) {
     return li;
 }
 
-module.exports = { getClientAccountsElement, getAccountElement };
+export { getClientAccountsElement, getAccountElement };

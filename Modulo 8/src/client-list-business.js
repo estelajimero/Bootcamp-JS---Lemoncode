@@ -1,5 +1,5 @@
-const ClientBusiness = require("./client-business");
-const DataBusiness = require("./data-business");
+import * as ClientBusiness from "./client-business";
+import * as DataBusiness from "./data-business";
 
 function printClientsAccounts() {
     const clients = DataBusiness.getClients();

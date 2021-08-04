@@ -6,4 +6,4 @@ function getNodeStyle(account) {
     return "color: blue";
 }
 
-module.exports = { getNodeStyle };
+export { getNodeStyle };
