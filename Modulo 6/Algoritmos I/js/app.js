@@ -123,6 +123,9 @@ function getProductSubtotal () {
     return subtotal;
 }
 
+// En getIVA itera sobre el array y utiliza los valores que tienes almacenados en el objeto en vez de 
+// usar las ids que has generado en el html y en getProductSubtotal lo mismo
+
 function getIVA () {
     let totalTaxes = 0;
 
