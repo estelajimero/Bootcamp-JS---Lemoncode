@@ -22,3 +22,18 @@ DataBusiness.getAllCharacters().then(characters => {
         document.getElementById("root").append(node);
     }
 })
+
+DataBusiness.getQuote().then(quotes => {
+    document.getElementById("quotes").innerText = "";
+
+    const quoteNodes = [];
+
+    for (let quote of quotes) {
+        const quoteNode = Utils.createQuoteRow(quote);
+        quoteNodes.push(quoteNode);
+    }
+
+    for (let quoteNode of quoteNodes) {
+        document.getElementById("quotes").append(quoteNode);
+    }
+})

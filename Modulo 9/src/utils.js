@@ -12,6 +12,27 @@ const createCharacterRow = character => {
     return element;
 };
 
+const createQuoteRow = quote => {
+    const element = document.createElement("div");
+
+    const quotes = createQuoteText(quote.quote);
+    element.appendChild(quotes);
+
+    const author = createQuoteText(quote.author);
+    element.appendChild(author);
+
+    quotes.className = "text-quote";
+
+    return element;
+}
+
+const createQuoteText = quote => {
+    const element = document.createElement("span");
+    element.append(quote);
+
+    return element;
+}
+
 const createAvatar = character => {
     const element = document.createElement("img");
     element.width = 150;
@@ -57,4 +78,4 @@ const createParagraph = text => {
     return element;
 };
 
-export { createCharacterRow, showCharacter };
+export { createCharacterRow, showCharacter, createQuoteRow };
