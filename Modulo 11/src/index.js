@@ -40,7 +40,7 @@ class Reserva {
     }
 
     breakfastIncluded(breakfast) {
-        return breakfast === true ? 15 : 0;
+        return breakfast ? 15 : 0;
     }
 
     getSubtotal() {
